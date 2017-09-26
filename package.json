@@ -1,0 +1,36 @@
+{
+  "name": "arcade-demo",
+  "version": "0.0.1",
+  "description": "An arcade demo app",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "setup": "npm run link:app && npm run link:header",
+    "link:app": "npm link @hbc-tech/arcade-app",
+    "link:header": "npm link @hbc-tech/arcade-header",
+    "lint": "eslint .",
+    "postinstall": "npm run setup",
+    "start": "node app",
+    "test": "npm run install:modules && npm run lint"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "repository": "hbc-tech/arcade-demo",
+  "maintainers": [
+    {
+      "name": "Andrew Powell",
+      "email": "andrew@shellscape.org",
+      "url": "shellscape.org"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-config-webpack": "^1.2.5",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}
